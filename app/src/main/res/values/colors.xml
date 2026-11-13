@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#14B8A6</color>
+    <color name="blue_dark">#0F766E</color>
+    <color name="navy">#163A36</color>
+    <color name="muted">#6A7D79</color>
+    <color name="background">#F2F8F7</color>
+    <color name="green">#0F9F6E</color>
+    <color name="red">#D14D57</color>
+    <color name="white">#FFFFFF</color>
+    <color name="surfaceAlt">#E8F7F4</color>
+    <color name="surfaceLine">#D6ECE7</color>
+    <color name="chipGreenBg">#E3F8EF</color>
+    <color name="chipRedBg">#FDECEE</color>
+    <color name="chipBlueBg">#DDF6F2</color>
+</resources>

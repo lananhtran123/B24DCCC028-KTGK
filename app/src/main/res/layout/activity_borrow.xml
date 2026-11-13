@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="‹ Quay lại"
+            android:textColor="@color/blue_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_header"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lập phiếu mượn"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Chọn sách còn sẵn, nhập thông tin người mượn và lưu phiếu"
+                android:textColor="#E8FFFC"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_section"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin mượn sách"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp"
+                android:text="Chọn sách có sẵn *"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spinnerBorrowBook"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+
+            <TextView
+                android:id="@+id/txtNoAvailableBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_secondary"
+                android:padding="12dp"
+                android:text="Hiện không có sách nào sẵn để mượn. Hãy thêm sách hoặc trả sách đã mượn."
+                android:textColor="@color/muted"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="6dp"
+                android:text="Họ tên người mượn *"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edtBorrower"
+                style="@style/FormInput"
+                android:hint="Nhập họ tên"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="6dp"
+                android:text="Số điện thoại *"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edtPhone"
+                style="@style/FormInput"
+                android:hint="VD: 0912345678"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="6dp"
+                android:text="Ngày mượn *"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edtBorrowDate"
+                style="@style/FormInput"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:hint="Chọn ngày mượn"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="6dp"
+                android:text="Ngày dự kiến trả *"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edtDueDate"
+                style="@style/FormInput"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:hint="Chọn ngày trả"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirmBorrow"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="16dp"
+            android:text="Xác nhận mượn sách" />
+    </LinearLayout>
+</ScrollView>
